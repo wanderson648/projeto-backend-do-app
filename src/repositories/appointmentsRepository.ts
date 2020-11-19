@@ -13,6 +13,11 @@ class AppointmentsRepository {
     this.appointments = [];
   }
 
+  // metodo para listar todos os appointments
+  public all(): Appointment[] {
+    return this.appointments;
+  }
+
   // metodo para encontrar uma data
   public findByDate(date: Date): Appointment | null {
     const findAppointment = this.appointments.find(appointment =>
