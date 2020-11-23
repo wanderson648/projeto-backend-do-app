@@ -1,16 +1,15 @@
 import { startOfHour } from 'date-fns';
 import Appointment from '../model/Appointment';
-import AppointmentsRepository from '../repositories/appointmentsRepository';
+import AppointmentRepository from '../repositories/appointmentsRepository';
 
 interface Request {
   provider: string;
   date: Date;
 }
-
 class CreateAppointmentService {
-  private appointmentsRepository: AppointmentsRepository;
+  private appointmentsRepository: AppointmentRepository;
 
-  constructor(appointmentsRepository: AppointmentsRepository) {
+  constructor(appointmentsRepository: AppointmentRepository) {
     this.appointmentsRepository = appointmentsRepository;
   }
 
@@ -22,7 +21,7 @@ class CreateAppointmentService {
     );
 
     if (findAppointmentInSameDate) {
-      throw Error('This appointment is already booked');
+      throw new Error('This appointment is already booked');
     }
 
     const appointment = this.appointmentsRepository.create({

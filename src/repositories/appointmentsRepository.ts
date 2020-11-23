@@ -6,19 +6,17 @@ interface CreateAppointmentDTO {
   date: Date;
 }
 
-class AppointmentsRepository {
+class AppointmentRepository {
   private appointments: Appointment[];
 
   constructor() {
     this.appointments = [];
   }
 
-  // metodo para listar todos os appointments
-  public all(): Appointment[] {
+  public All(): Appointment[] {
     return this.appointments;
   }
 
-  // metodo para encontrar uma data
   public findByDate(date: Date): Appointment | null {
     const findAppointment = this.appointments.find(appointment =>
       isEqual(date, appointment.date),
@@ -27,7 +25,6 @@ class AppointmentsRepository {
     return findAppointment || null;
   }
 
-  // metodo para criar um agendamento
   public create({ provider, date }: CreateAppointmentDTO): Appointment {
     const appointment = new Appointment({ provider, date });
 
@@ -37,4 +34,4 @@ class AppointmentsRepository {
   }
 }
 
-export default AppointmentsRepository;
+export default AppointmentRepository;

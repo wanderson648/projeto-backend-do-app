@@ -1,14 +1,14 @@
 import { Router } from 'express';
 import { parseISO } from 'date-fns';
-import AppointmentsRespository from '../repositories/appointmentsRepository';
+import AppointmentRepository from '../repositories/appointmentsRepository';
 import CreateAppointmentService from '../services/CreateAppointmentService';
 
 const appointmentsRouter = Router();
 
-const appointmentsRepository = new AppointmentsRespository();
+const appointmentsRepository = new AppointmentRepository();
 
 appointmentsRouter.get('/', (request, response) => {
-  const appointments = appointmentsRepository.all();
+  const appointments = appointmentsRepository.All();
 
   return response.json(appointments);
 });
