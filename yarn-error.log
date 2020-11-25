@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add reflect-meatada
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @type/bcryptjs -D
 
 PATH: 
   C:\Users\wanderson\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\wanderson\bin;C:\Python27;C:\Python27\Scripts;C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Yarn\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Users\wanderson\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\nodejs;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\wanderson\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\wanderson\AppData\Local\Yarn\bin;C:\Program Files\Docker Toolbox;C:\Users\wanderson\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/reflect-meatada: Not found
+  Error: https://registry.yarnpkg.com/@type%2fbcryptjs: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66096:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140748:22)
       at Request.emit (events.js:315:20)
@@ -38,9 +38,11 @@ npm manifest:
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
     },
     "dependencies": {
+      "bcryptjs": "^2.4.3",
       "date-fns": "^2.16.1",
       "express": "^4.17.1",
       "pg": "^8.5.1",
+      "reflect-metadata": "^0.1.13",
       "typeorm": "^0.2.29",
       "uuid": "^8.3.1",
       "uuidv4": "^6.2.5"
@@ -418,6 +420,11 @@ Lockfile:
     version "1.5.1"
     resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
     integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
+  
+  bcryptjs@^2.4.3:
+    version "2.4.3"
+    resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
+    integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
   
   binary-extensions@^2.0.0:
     version "2.1.0"
